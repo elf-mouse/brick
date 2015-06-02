@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css">
+  <script src="../../build/blocks.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <div id="products" data-query="view(Products)">
+    <input data-query="val(newProduct.name).keydown(keydown)" placeholder="Add new value and press enter">
+    <div data-query="each(products)">
+      <div class="result-wrap">
+        <span data-query="visible(!editing())" class="value-holder">
+          {{name}}
+        </span>
+        <span data-query="visible(editing)" class="value-holder">
+          <input data-query="val(name)">
+        </span>
+        <span class="buttons-holder">
+            <span data-query="click(toggleEdit)">
+              {{editing() ? 'Update' : 'Edit'}}
+            </span>
+        <span data-query="click(remove)" class="btn-delete">Delete</span>
+        </span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

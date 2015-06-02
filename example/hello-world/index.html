@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="../../build/blocks.js"></script>
+  <script>
+  blocks.query({
+    firstName: blocks.observable('John'),
+    lastName: blocks.observable('Doe')
+  });
+  </script>
+</head>
+
+<body>
+  First Name:
+  <input data-query="val(firstName)"> Last Name:
+  <input data-query="val(lastName)">
+  <h2>Hello {{firstName}} {{lastName}}!</h2>
+</body>
+
+</html>

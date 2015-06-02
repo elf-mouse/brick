@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="../../build/blocks.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <input data-query="val(filterVal)" placeholder="Search for a block name">
+  <div class="result-box" data-query="each(items.view)">
+    <div class="tile" data-query="css('top', Math.floor($index() / 4) * 91).css('left', ($index() % 4) * 91)">
+      <span class="fa fa-{{icon}}"></span>
+      <h4>{{title}}</h4>
+    </div>
+  </div>
+</body>
+
+</html>
